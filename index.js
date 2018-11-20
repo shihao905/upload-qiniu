@@ -2,6 +2,7 @@ const qiniu = require("qiniu");
 const fs = require("fs");
 const path = require("path");
 const fontColor = require("./style");
+const ProgressBar = require('./progress');
 class QiniuUpload {
   constructor(option) {
     qiniu.conf.ACCESS_KEY = option.ACCESS_KEY || null;
@@ -21,6 +22,7 @@ class QiniuUpload {
         return;
       }
       console.log(fontColor.yellow, "开始上传...");
+      let pb = new ProgressBar('上传进度');
       this.filesList.map(file => {
         file.token = this.getToken(file.key);
         this.uploadFile(file, (err, ret) => {
@@ -31,10 +33,10 @@ class QiniuUpload {
           } else {
             file.url = ret.key;
             this.uploadFiles.push(file);
-            console.log(this.uploadFiles.length, this.filesList.length);
-            if (this.uploadFiles.length == this.filesList.length) {
-              console.log(fontColor.green, "上传完成！");
-            }
+          }
+          pb.render({ completed: this.uploadFiles.length, total: this.filesList.length });
+          if (this.uploadFiles.length == this.filesList.length) {
+            console.log(fontColor.green, "上传完成！");
           }
         });
       });

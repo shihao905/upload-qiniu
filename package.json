@@ -1,6 +1,6 @@
 {
   "name": "anve-upload-qiniu",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "上传七牛插件",
   "main": "index.js",
   "scripts": {
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/shihao905/upload-qiniu#readme",
   "dependencies": {
-    "qiniu": "^7.2.1"
+    "qiniu": "^7.2.1",
+    "single-line-log": "^1.1.2"
   }
 }
