@@ -4,14 +4,14 @@
 
 ## Install
 
-```
+```js
 $ npm install --save anve-upload-qiniu
 ```
 
 
 ## Usage
 
-```
+```js
 const QiniuUpload = require('./index');
 const path = require('path');
 new QiniuUpload({
