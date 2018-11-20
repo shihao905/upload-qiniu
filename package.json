@@ -1,0 +1,26 @@
+{
+  "name": "anve-upload-qiniu",
+  "version": "1.0.0",
+  "description": "上传七牛插件",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shihao905/upload-qiniu.git"
+  },
+  "keywords": [
+    "qiniu",
+    "upload-qiniu"
+  ],
+  "author": "shihao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shihao905/upload-qiniu/issues"
+  },
+  "homepage": "https://github.com/shihao905/upload-qiniu#readme",
+  "dependencies": {
+    "qiniu": "^7.2.1"
+  }
+}
