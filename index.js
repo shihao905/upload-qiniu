@@ -104,7 +104,6 @@ class QiniuUpload {
   getFileList(cb) {
     let filesList = [];
     this.getFileByDir(this.fileDirectory, filesList);
-    console.log(filesList)
     cb && cb(filesList);
   }
   getToken(key) {
