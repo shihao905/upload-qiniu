@@ -1,6 +1,6 @@
 {
   "name": "anve-upload-qiniu",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "上传七牛插件",
   "main": "index.js",
   "scripts": {
