@@ -11,7 +11,7 @@ $ npm install --save anve-upload-qiniu
 ## use
 
 ```js
-const QiniuUpload = require('./index');
+const QiniuUpload = require('anve-upload-qiniu');
 const path = require('path');
 new QiniuUpload({
    /**
